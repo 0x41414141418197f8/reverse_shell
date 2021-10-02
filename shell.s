@@ -5,7 +5,11 @@ global _socket
 section .bss
     input resb 256
 
-
+    struc _socket_struct
+        sin_family: resw 1
+        sin_port: resw 1
+        sin_addr: resd 1
+    endstruc
 
 
 section .rodata
